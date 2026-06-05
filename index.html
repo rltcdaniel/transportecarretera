@@ -178,14 +178,6 @@ body.article-open .page-article{
 .tag-amber{background:var(--amber-bg);color:var(--amber)}
 .tag-red{background:var(--brand-light);color:var(--brand)}
 
-/* NEWSLETTER */
-.newsletter{background:var(--brand);padding:3rem 1.5rem;text-align:center}
-.newsletter h2{font-family:'Barlow Condensed',sans-serif;font-size:1.9rem;font-weight:700;color:#fff;margin-bottom:.5rem}
-.newsletter p{color:rgba(255,255,255,.8);margin-bottom:1.5rem;font-size:.95rem}
-.nl-form{display:flex;max-width:400px;margin:0 auto;background:#fff;border-radius:6px;overflow:hidden}
-.nl-form input{flex:1;border:none;outline:none;padding:.7rem 1rem;font-family:'Barlow',sans-serif;font-size:.9rem;color:var(--ink)}
-.nl-form button{background:#181818;color:#fff;border:none;padding:0 1.25rem;cursor:pointer;font-family:'Barlow',sans-serif;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;transition:background .15s}
-.nl-form button:hover{background:var(--brand-dark)}
 
 /* FOOTER */
 footer{background:#181818;color:#888;padding:3rem 1.5rem 2rem}
@@ -559,16 +551,6 @@ footer p{font-size:.84rem;line-height:1.65}
     </div>
   </div>
 </section>
-<section class="newsletter">
-  <div class="container">
-    <h2>Mantente al día con el sector</h2>
-    <p>Recibe cada semana las novedades normativas, cambios de tarifas y noticias del transporte por carretera.</p>
-    <div class="nl-form">
-      <input type="email" placeholder="tu@email.com" id="nl-email">
-      <button onclick="suscribir()">Suscribirme</button>
-    </div>
-  </div>
-</section>
 <footer>
   <div class="footer-grid">
     <div>
@@ -742,12 +724,6 @@ function planificar() {
   el.innerHTML = html;
 }
 
-/* ── NEWSLETTER ── */
-function suscribir() {
-  var v = document.getElementById('nl-email').value;
-  if (v && v.includes('@')) { alert('¡Gracias por suscribirte! Recibirás nuestro boletín semanal.'); document.getElementById('nl-email').value = ''; }
-  else { alert('Por favor, introduce un correo electrónico válido.'); }
-}
 </script>
 </body>
 </html>
