@@ -1,4 +1,111 @@
-<!DOCTYPE html>
+<!DOCTYPE
+<section class="section section-alt" id="conversor">
+  <div class="container">
+    <div class="section-title">Conversor de pesos y medidas</div>
+    <div class="section-sub">Convierte entre las unidades más habituales del transporte de mercancías por carretera</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:800px">
+      <div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem">
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1rem">Peso</h3>
+          <div class="form-group">
+            <label>Valor</label>
+            <input type="number" id="conv-val" placeholder="Ej: 1000" oninput="convertir()" min="0">
+          </div>
+          <div class="form-group">
+            <label>De</label>
+            <select id="conv-from" onchange="convertir()">
+              <option value="kg">Kilogramos (kg)</option>
+              <option value="t">Toneladas métricas (t)</option>
+              <option value="lb">Libras (lb)</option>
+              <option value="g">Gramos (g)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>A</label>
+            <select id="conv-to" onchange="convertir()">
+              <option value="t">Toneladas métricas (t)</option>
+              <option value="kg">Kilogramos (kg)</option>
+              <option value="lb">Libras (lb)</option>
+              <option value="g">Gramos (g)</option>
+            </select>
+          </div>
+          <div style="background:var(--brand);color:#fff;padding:1rem;border-radius:8px;text-align:center;margin-top:.5rem">
+            <div style="font-size:.78rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Resultado</div>
+            <div id="conv-result" style="font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700">—</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem">
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1rem">Equivalencias de carga</h3>
+          <div class="form-group">
+            <label>Valor</label>
+            <input type="number" id="eq-val" placeholder="Ej: 33" oninput="equivalencias()" min="0">
+          </div>
+          <div class="form-group">
+            <label>Unidad de entrada</label>
+            <select id="eq-from" onchange="equivalencias()">
+              <option value="paleu">Palés europeos (120×80 cm)</option>
+              <option value="ml">Metros lineales (semirremolque)</option>
+              <option value="m3">Metros cúbicos (m³)</option>
+              <option value="t">Toneladas</option>
+            </select>
+          </div>
+          <div id="eq-result" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:.5rem;font-size:.88rem;line-height:1.8">
+            Introduce un valor para ver las equivalencias
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="planificador">
+  <div class="container">
+    <div class="section-title">Planificador de jornada</div>
+    <div class="section-sub">Comprueba si tu jornada cumple con el Reglamento UE 561/2006 — introduce los tiempos en horas y minutos</div>
+    <div style="max-width:800px;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
+        <div style="padding:2rem;border-right:1px solid var(--border)">
+          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.25rem">Tu jornada</h3>
+          <div class="form-group">
+            <label>Horas de conducción previstas</label>
+            <input type="number" id="plan-cond-h" placeholder="Ej: 8" min="0" max="24" oninput="planificar()">
+          </div>
+          <div class="form-group">
+            <label>Minutos adicionales de conducción</label>
+            <input type="number" id="plan-cond-m" placeholder="Ej: 30" min="0" max="59" oninput="planificar()">
+          </div>
+          <div class="form-group">
+            <label>¿Has tomado la pausa de 45 min?</label>
+            <select id="plan-pausa" onchange="planificar()">
+              <option value="si">Sí</option>
+              <option value="no">No (o menor de 45 min)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Descanso diario previsto (horas)</label>
+            <input type="number" id="plan-descanso" placeholder="Ej: 11" min="0" max="24" oninput="planificar()">
+          </div>
+          <div class="form-group">
+            <label>¿Cuántas veces has ampliado a 10h esta semana?</label>
+            <select id="plan-ampliaciones" onchange="planificar()">
+              <option value="0">Ninguna</option>
+              <option value="1">1 vez</option>
+              <option value="2">2 veces (máximo permitido)</option>
+            </select>
+          </div>
+          <button class="calc-btn" onclick="planificar()">Comprobar jornada</button>
+        </div>
+        <div style="padding:2rem;background:#181818" id="plan-result">
+          <div style="color:#777;font-size:.85rem;text-align:center;padding-top:2rem">Introduce los datos y pulsa comprobar</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:.78rem;color:var(--ink-faint);margin-top:.75rem">Esta herramienta es orientativa. Consulta siempre el Reglamento (CE) 561/2006 y el Reglamento (UE) 2020/1054 para decisiones con efectos legales.</p>
+  </div>
+</section>
+ html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -495,11 +602,11 @@ footer p{font-size:.84rem;line-height:1.65}
         <p>Calcula el consumo y coste de gasoil de una ruta con tu vehículo específico.</p>
         <span class="tool-link" style="color:var(--ink-faint)">Próximamente</span>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" onclick="document.getElementById('conversor').scrollIntoView({behavior:'smooth'})">
         <div class="tool-icon">⚖️</div>
         <h3>Conversor de pesos y medidas</h3>
-        <p>Convierte kg, toneladas, palés europeos, metros lineales y metros cúbicos.</p>
-        <span class="tool-link" style="color:var(--ink-faint)">Próximamente</span>
+        <p>Convierte kg, toneladas, palés europeos, metros lineales y metros cúbicos al instante.</p>
+        <span class="tool-link">Convertir ahora →</span>
       </div>
       <div class="tool-card">
         <div class="tool-icon">🕐</div>
@@ -657,38 +764,118 @@ footer p{font-size:.84rem;line-height:1.65}
     <span>Información orientativa — consulta siempre fuentes oficiales</span>
   </div>
 </footer>
-<script>function calcular(){
-  const km=parseFloat(document.getElementById('c-km').value)||620;
-  const tipo=document.getElementById('c-tipo').value;
-  const mercancias=document.getElementById('c-mercancias').value;
-  const urgencia=document.getElementById('c-urgencia').value;
-  const tarifaKm={furgon:.82,rigido:1.08,articulado:1.33,frigorifico:1.60,cisterna:1.72};
-  const mMerc={general:1,paletizada:1.05,fragil:1.14,peligrosa:1.33,temperatura:1.38};
-  const mUrg={normal:1,rapido:1.28,express:1.62};
-  const base=km*(tarifaKm[tipo]||1.33);
-  const fuel=base*.18;
-  const merc=base*(mMerc[mercancias]-1);
-  const urg=(base+fuel+merc)*(mUrg[urgencia]-1);
-  const total=base+fuel+merc+urg;
-  document.getElementById('res-price').textContent=Math.round(total).toLocaleString('es-ES')+'€';
-  document.getElementById('res-range').textContent='Rango: '+Math.round(total*.87).toLocaleString('es-ES')+'€ – '+Math.round(total*1.19).toLocaleString('es-ES')+'€';
-  document.getElementById('r-base').textContent=Math.round(base)+'€';
-  document.getElementById('r-fuel').textContent=Math.round(fuel)+'€';
-  document.getElementById('r-merc').textContent=Math.round(merc)+'€';
-  document.getElementById('r-urg').textContent=Math.round(urg)+'€';
-  document.getElementById('res-table').style.display='block';
+<script>
+/* ── CALCULADORA DE PORTE ── */
+function calcular() {
+  var km = parseFloat(document.getElementById('c-km').value) || 620;
+  var tipo = document.getElementById('c-tipo').value;
+  var mercancias = document.getElementById('c-mercancias').value;
+  var urgencia = document.getElementById('c-urgencia').value;
+  var tarifaKm = {furgon:0.82, rigido:1.08, articulado:1.33, frigorifico:1.60, cisterna:1.72};
+  var mMerc = {general:1, paletizada:1.05, fragil:1.14, peligrosa:1.33, temperatura:1.38};
+  var mUrg = {normal:1, rapido:1.28, express:1.62};
+  var base = km * (tarifaKm[tipo] || 1.33);
+  var fuel = base * 0.18;
+  var merc = base * (mMerc[mercancias] - 1);
+  var urg = (base + fuel + merc) * (mUrg[urgencia] - 1);
+  var total = base + fuel + merc + urg;
+  document.getElementById('r-price').textContent = Math.round(total).toLocaleString('es-ES') + '€';
+  document.getElementById('r-range').textContent = 'Rango: ' + Math.round(total * 0.87).toLocaleString('es-ES') + '€ – ' + Math.round(total * 1.19).toLocaleString('es-ES') + '€';
+  document.getElementById('r-km').textContent = Math.round(base) + '€';
+  document.getElementById('r-fuel').textContent = Math.round(fuel) + '€';
+  document.getElementById('r-mercan').textContent = Math.round(merc) + '€';
+  document.getElementById('r-urg').textContent = Math.round(urg) + '€';
+  document.getElementById('r-bd').style.display = 'block';
 }
-function filterCat(cat,el){
-  document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active'));
-  if(el)el.classList.add('active');
-  document.querySelectorAll('#blog-grid [data-cat]').forEach(card=>{
-    card.style.display=(cat==='todo'||card.dataset.cat===cat)?'':'none';
+
+/* ── FILTRO CATEGORÍAS ── */
+function filterCat(cat, el) {
+  document.querySelectorAll('.cat-pill').forEach(function(p) { p.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  document.querySelectorAll('#blog-grid [data-cat]').forEach(function(card) {
+    card.style.display = (cat === 'todo' || card.dataset.cat === cat) ? '' : 'none';
   });
 }
-function suscribir(){
-  const v=document.getElementById('nl-email').value;
-  if(v&&v.includes('@')){alert('¡Gracias por suscribirte!');document.getElementById('nl-email').value='';}
-  else{alert('Por favor, introduce un correo electrónico válido.');}
-}</script>
+
+/* ── CONVERSOR DE PESOS ── */
+function convertir() {
+  var val = parseFloat(document.getElementById('conv-val').value);
+  var from = document.getElementById('conv-from').value;
+  var to = document.getElementById('conv-to').value;
+  var el = document.getElementById('conv-result');
+  if (isNaN(val)) { el.textContent = '—'; return; }
+  var toKg = {kg:1, t:1000, lb:0.453592, g:0.001};
+  var fromKg = {kg:1, t:0.001, lb:2.20462, g:1000};
+  var result = val * toKg[from] / toKg[to];
+  el.textContent = result >= 100 ? result.toFixed(2) : result.toPrecision(4);
+  el.textContent += ' ' + to;
+}
+
+function equivalencias() {
+  var val = parseFloat(document.getElementById('eq-val').value);
+  var from = document.getElementById('eq-from').value;
+  var el = document.getElementById('eq-result');
+  if (isNaN(val) || val <= 0) { el.textContent = 'Introduce un valor para ver las equivalencias'; return; }
+  var html = '';
+  if (from === 'paleu') {
+    html = '<strong>' + val + ' palés europeos</strong> equivalen aproximadamente a:<br>' +
+      '• <strong>' + (val * 0.4).toFixed(1) + ' metros lineales</strong> en semirremolque<br>' +
+      '• <strong>' + (val * 0.768).toFixed(2) + ' m³</strong> de volumen útil (96×80×100 cm)<br>' +
+      '• Carga máxima orientativa: <strong>' + (val * 700).toLocaleString('es-ES') + ' kg</strong>';
+  } else if (from === 'ml') {
+    html = '<strong>' + val + ' metros lineales</strong> equivalen aproximadamente a:<br>' +
+      '• <strong>' + (val / 0.4).toFixed(0) + ' palés europeos</strong> (120×80 cm)<br>' +
+      '• <strong>' + (val * 1.92).toFixed(2) + ' m³</strong> de volumen útil<br>' +
+      '• Semirremolque estándar (13,6 ml): <strong>' + ((val / 13.6) * 100).toFixed(1) + '%</strong> de ocupación';
+  } else if (from === 'm3') {
+    html = '<strong>' + val + ' m³</strong> equivalen aproximadamente a:<br>' +
+      '• <strong>' + (val / 0.768).toFixed(1) + ' palés europeos</strong><br>' +
+      '• <strong>' + (val / 1.92).toFixed(2) + ' metros lineales</strong> en semirremolque<br>' +
+      '• Densidad media general: <strong>' + (val * 250).toLocaleString('es-ES') + ' kg</strong>';
+  } else if (from === 't') {
+    html = '<strong>' + val + ' toneladas</strong> equivalen aproximadamente a:<br>' +
+      '• <strong>' + (val * 1000).toLocaleString('es-ES') + ' kg</strong><br>' +
+      '• Palés (700 kg/palé): <strong>' + Math.round(val * 1000 / 700) + ' palés</strong> orientativos<br>' +
+      '• Articulado 40t: <strong>' + ((val / 24) * 100).toFixed(1) + '%</strong> de carga útil máxima';
+  }
+  el.innerHTML = html;
+}
+
+/* ── PLANIFICADOR DE JORNADA ── */
+function planificar() {
+  var h = parseFloat(document.getElementById('plan-cond-h').value) || 0;
+  var m = parseFloat(document.getElementById('plan-cond-m').value) || 0;
+  var pausa = document.getElementById('plan-pausa').value;
+  var descanso = parseFloat(document.getElementById('plan-descanso').value) || 0;
+  var ampliaciones = parseInt(document.getElementById('plan-ampliaciones').value) || 0;
+  var condMin = h * 60 + m;
+  var condH = condMin / 60;
+  var el = document.getElementById('plan-result');
+  var items = [];
+  var ok = true;
+  var maxDia = ampliaciones < 2 ? 9 : 10;
+  var condOk = condH <= maxDia;
+  if (!condOk) ok = false;
+  items.push({ok:condOk, text:'Conducción diaria: <strong>' + h + 'h ' + m + 'min</strong> — límite ' + maxDia + 'h ' + (condOk ? '✅' : '❌')});
+  var pausaOk = pausa === 'si' || condMin <= 270;
+  if (!pausaOk) ok = false;
+  items.push({ok:pausaOk, text:'Pausa de 45 min tras 4h 30min: ' + (pausaOk ? '✅ Cumplida' : '❌ Obligatoria si superas 4h 30min')});
+  var descOk = descanso >= 9;
+  if (!descOk) ok = false;
+  items.push({ok:descOk, text:'Descanso diario: <strong>' + descanso + 'h</strong> — ' + (descanso >= 11 ? '✅ Normal (≥11h)' : descanso >= 9 ? '⚠️ Reducido (≥9h, máx. 3 veces/semana)' : '❌ Insuficiente (mín. 9h)')});
+  items.push({ok:ampliaciones <= 2, text:'Ampliaciones a 10h esta semana: <strong>' + ampliaciones + '</strong> — ' + (ampliaciones <= 1 ? '✅ Dentro del límite' : '⚠️ Máximo 2 veces por semana')});
+  var html = '<div style="font-family:Barlow Condensed,sans-serif;font-size:1.2rem;font-weight:700;color:' + (ok ? '#4ade80' : '#f87171') + ';margin-bottom:1rem">' + (ok ? '✅ Jornada dentro de los límites' : '❌ Revisa los puntos marcados') + '</div>';
+  html += items.map(function(i) { return '<div style="color:' + (i.ok ? 'rgba(255,255,255,.85)' : '#fca5a5') + ';font-size:.84rem;margin-bottom:.6rem;line-height:1.5">' + i.text + '</div>'; }).join('');
+  html += '<div style="border-top:1px solid rgba(255,255,255,.15);margin-top:1rem;padding-top:1rem;font-size:.76rem;color:rgba(255,255,255,.45)">Basado en Reglamento (CE) 561/2006 y Reglamento (UE) 2020/1054</div>';
+  el.innerHTML = html;
+}
+
+/* ── NEWSLETTER ── */
+function suscribir() {
+  var v = document.getElementById('nl-email').value;
+  if (v && v.includes('@')) { alert('¡Gracias por suscribirte! Recibirás nuestro boletín semanal.'); document.getElementById('nl-email').value = ''; }
+  else { alert('Por favor, introduce un correo electrónico válido.'); }
+}
+</script>
 </body>
 </html>
