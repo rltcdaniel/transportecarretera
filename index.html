@@ -83,20 +83,6 @@ nav.main-nav a:hover{color:#fff}
 .read-more{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:1rem;display:inline-block}
 
 /* MODAL ARTÍCULO */
-/* ARTICLE PAGE VIEW */
-.page-home{display:block}
-.page-article{display:none}
-.page-article.active{display:block}
-/* When article open: fix page-article to viewport, hide everything else */
-body.article-open{overflow:hidden}
-body.article-open .page-article{
-  display:block;
-  position:fixed;
-  top:0;left:0;right:0;bottom:0;
-  overflow-y:auto;
-  z-index:1000;
-  background:var(--surface);
-}
 .article-page{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
 .article-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1.5rem;text-decoration:none;padding:.4rem .85rem;border:1.5px solid var(--brand);border-radius:5px;transition:all .15s}
 .article-back:hover{background:var(--brand);color:#fff;text-decoration:none}
@@ -218,11 +204,11 @@ footer p{font-size:.84rem;line-height:1.65}
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a href="#" class="site-logo" >Transporte<span>Carretera</span>.es</a>
+    <a href="index.html" class="site-logo" >Transporte<span>Carretera</span>.es</a>
     <nav class="main-nav">
-      <a href="#articulos">Artículos</a>
-      <a href="#herramientas">Herramientas</a>
-      <a href="#normativa">Normativa</a>
+      <a href="index.html#articulos">Artículos</a>
+      <a href="index.html#herramientas">Herramientas</a>
+      <a href="index.html#normativa">Normativa</a>
     </nav>
   </div>
 </header>
@@ -658,7 +644,7 @@ footer p{font-size:.84rem;line-height:1.65}
     <div>
       <h4>Herramientas</h4>
       <ul>
-        <li><a href="#calculadora">Calculadora de porte</a></li>
+        <li><a href="index.html#herramientas">Calculadora de porte</a></li>
         <li><a href="#">Calculadora de combustible</a></li>
         <li><a href="#">Conversor de pesos</a></li>
         <li><a href="#">Planificador de jornada</a></li>
