@@ -211,7 +211,9 @@ footer p{font-size:.84rem;line-height:1.65}
   .container{padding:0 1rem}
 }
 
-.article-standalone{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+.article-standalone{max-width:1160px;margin:0 auto;padding:2.5rem 1.5rem 4rem;display:grid;grid-template-columns:1fr min(760px,100%) 1fr;gap:0}
+.article-standalone>*{grid-column:2}
+.article-standalone>.article-content{grid-column:2}
 .article-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1.5rem;text-decoration:none;padding:.4rem .85rem;border:1.5px solid var(--brand);border-radius:5px;transition:all .15s}
 .article-back:hover{background:var(--brand);color:#fff;text-decoration:none}
 .article-hero{background:#181818;padding:2rem 1.5rem 1.75rem;border-bottom:3px solid var(--brand)}
