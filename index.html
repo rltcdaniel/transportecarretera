@@ -49,11 +49,6 @@ nav.main-nav a:hover{color:#fff}
 .hero-stat .lbl{font-size:.72rem;color:#666;text-transform:uppercase;letter-spacing:.06em;margin-top:.1rem}
 
 /* ADSENSE */
-.ad-leaderboard{background:var(--surface-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.ad-leaderboard-inner{max-width:1160px;margin:0 auto;padding:.65rem 1.5rem;display:flex;justify-content:center}
-.ad-ph{background:var(--surface-3);border:1px dashed var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em}
-.ad-ph-728{width:728px;max-width:100%;height:90px}
-.ad-ph-300{width:300px;height:250px;margin-bottom:1.5rem}
 
 /* LAYOUT */
 .container{max-width:1160px;margin:0 auto;padding:0 1.5rem}
@@ -238,9 +233,6 @@ footer p{font-size:.84rem;line-height:1.65}
     <p>Guías prácticas, normativa actualizada y calculadoras gratuitas para autónomos, transportistas y empresas del sector.</p>
   </div>
 </section>
-<div class="ad-leaderboard">
-  <div class="ad-leaderboard-inner">
-    <div class="ad-ph ad-ph-728">Google AdSense — 728×90 leaderboard</div>
   </div>
 </div>
 
@@ -266,7 +258,22 @@ footer p{font-size:.84rem;line-height:1.65}
         <div class="blog-grid" id="blog-grid">
 
           <!-- DESTACADO — artículo más reciente -->
-          <article onclick="location.href='articulos/seguro-mercancias.html'" style="cursor:pointer" class="card-featured" data-cat="gestion">
+                    <article class="card-featured" data-cat="normativa" onclick="location.href='tacografo-furgonetas.html'">
+            <div class="card-img" style="padding:0;background:linear-gradient(135deg,#0d1b2a 0%,#1a2d44 60%,#C8401A22 100%);display:flex;align-items:center;justify-content:center">
+              <div style="text-align:center;padding:1rem">
+                <div style="font-size:3rem;margin-bottom:.5rem">📡</div>
+                <div style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:#C8401A;letter-spacing:.05em">G2V2 · JULIO 2026</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-cat">Normativa · Urgente</div>
+              <h3>Tacógrafo en furgonetas: la nueva obligación del 1 de julio de 2026 que afecta al transporte ligero</h3>
+              <p class="excerpt">Desde el 1 de julio, las furgonetas de 2,5 a 3,5 t en transporte internacional deben llevar tacógrafo G2V2. Guía completa con exenciones, sanciones y lista de comprobación.</p>
+              <div class="card-meta"><span>📅 5 junio 2026</span><span>⏱ 10 min</span></div>
+              <span class="read-more">Leer artículo →</span>
+            </div>
+          </article>
+          <article onclick="location.href='seguro-mercancias.html'" style="cursor:pointer" class="card-featured" data-cat="gestion">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80&auto=format&fit=crop" alt="Seguro de mercancías transporte carretera" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Gestión · Guía completa</div>
@@ -277,7 +284,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/novedades-2026.html'" style="cursor:pointer" class="card" data-cat="normativa">
+          <article onclick="location.href='novedades-2026.html'" style="cursor:pointer" class="card" data-cat="normativa">
             <div class="card-img" style="padding:0"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgMTQ4IiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjE0OCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNreSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWEyNTM1Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzJkM2U1NSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0icm9hZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMWExYTFhIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMzMzIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMWExYSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPCEtLSBTa3kgYmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjE0OCIgZmlsbD0idXJsKCNza3kpIi8+CiAgPCEtLSBIb3Jpem9uIGdsb3cgLS0+CiAgPGVsbGlwc2UgY3g9IjMwMCIgY3k9IjkwIiByeD0iMzIwIiByeT0iNDAiIGZpbGw9IiNDODQwMUEiIG9wYWNpdHk9IjAuMTgiLz4KICA8IS0tIFJvYWQgc3VyZmFjZSAtLT4KICA8cmVjdCB4PSIwIiB5PSIxMDgiIHdpZHRoPSI2MDAiIGhlaWdodD0iNDAiIGZpbGw9InVybCgjcm9hZCkiLz4KICA8IS0tIFJvYWQgbWFya2luZ3MgLS0+CiAgPHJlY3QgeD0iNTUiIHk9IjEyNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIxMzUiIHk9IjEyNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIyMTUiIHk9IjEyNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIyOTUiIHk9IjEyNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSIzNzUiIHk9IjEyNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cmVjdCB4PSI0NTUiIHk9IjEyNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUiIHJ4PSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIFRydWNrIHNpbGhvdWV0dGUgLS0+CiAgPCEtLSBDYWJpbiAtLT4KICA8cmVjdCB4PSIzMjAiIHk9IjYwIiB3aWR0aD0iNTUiIGhlaWdodD0iNDgiIHJ4PSI0IiBmaWxsPSIjMmE0YTZhIi8+CiAgPCEtLSBXaW5kc2hpZWxkIC0tPgogIDxyZWN0IHg9IjMyNSIgeT0iNjUiIHdpZHRoPSI0NSIgaGVpZ2h0PSIyMiIgcng9IjMiIGZpbGw9IiM1YjhkYjgiIG9wYWNpdHk9IjAuOCIvPgogIDwhLS0gVHJhaWxlciAtLT4KICA8cmVjdCB4PSIxMTAiIHk9IjU1IiB3aWR0aD0iMjE1IiBoZWlnaHQ9IjUzIiByeD0iMyIgZmlsbD0iIzFlM2E1YSIvPgogIDxsaW5lIHgxPSIxNTAiIHkxPSI1NSIgeDI9IjE1MCIgeTI9IjEwOCIgc3Ryb2tlPSIjMTYzMDRkIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSIyMDAiIHkxPSI1NSIgeDI9IjIwMCIgeTI9IjEwOCIgc3Ryb2tlPSIjMTYzMDRkIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSIyNTAiIHkxPSI1NSIgeDI9IjI1MCIgeTI9IjEwOCIgc3Ryb2tlPSIjMTYzMDRkIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSIzMDAiIHkxPSI1NSIgeDI9IjMwMCIgeTI9IjEwOCIgc3Ryb2tlPSIjMTYzMDRkIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gV2hlZWxzIC0tPgogIDxjaXJjbGUgY3g9IjE1NSIgY3k9IjExMiIgcj0iMTAiIGZpbGw9IiMxMTEiLz4KICA8Y2lyY2xlIGN4PSIxNTUiIGN5PSIxMTIiIHI9IjUiIGZpbGw9IiMzMzMiLz4KICA8Y2lyY2xlIGN4PSIyMDUiIGN5PSIxMTIiIHI9IjEwIiBmaWxsPSIjMTExIi8+CiAgPGNpcmNsZSBjeD0iMjA1IiBjeT0iMTEyIiByPSI1IiBmaWxsPSIjMzMzIi8+CiAgPGNpcmNsZSBjeD0iMzM1IiBjeT0iMTEyIiByPSIxMCIgZmlsbD0iIzExMSIvPgogIDxjaXJjbGUgY3g9IjMzNSIgY3k9IjExMiIgcj0iNSIgZmlsbD0iIzMzMyIvPgogIDxjaXJjbGUgY3g9IjM2MCIgY3k9IjExMiIgcj0iMTAiIGZpbGw9IiMxMTEiLz4KICA8Y2lyY2xlIGN4PSIzNjAiIGN5PSIxMTIiIHI9IjUiIGZpbGw9IiMzMzMiLz4KICA8IS0tIEhlYWRsaWdodHMgZ2xvdyAtLT4KICA8ZWxsaXBzZSBjeD0iMzc2IiBjeT0iODUiIHJ4PSIxOCIgcnk9IjgiIGZpbGw9IiNmZmY5YzQiIG9wYWNpdHk9IjAuMjUiLz4KICA8Y2lyY2xlIGN4PSIzNzQiIGN5PSI4NSIgcj0iNCIgZmlsbD0iI2ZmZmRlNyIgb3BhY2l0eT0iMC43Ii8+CiAgPCEtLSBTdGFycyAtLT4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjIwIiByPSIxIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIxMCIgcj0iMS4yIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjgiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIyNSIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+CiAgPGNpcmNsZSBjeD0iNDUwIiBjeT0iMTUiIHI9IjEuMyIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNTIwIiBjeT0iMzAiIHI9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjU3MCIgY3k9IjEyIiByPSIxLjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPgo8L3N2Zz4=" alt="Camión articulado en autopista nocturna" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Normativa</div>
@@ -288,7 +295,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/precio-porte.html'" style="cursor:pointer" class="card" data-cat="tarifas">
+          <article onclick="location.href='precio-porte.html'" style="cursor:pointer" class="card" data-cat="tarifas">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80&auto=format&fit=crop" alt="Camión articulado en autopista" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Tarifas</div>
@@ -299,7 +306,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/tarjeta-transporte.html'" style="cursor:pointer" class="card" data-cat="gestion">
+          <article onclick="location.href='tarjeta-transporte.html'" style="cursor:pointer" class="card" data-cat="gestion">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&q=80&auto=format&fit=crop" alt="Gestión administrativa transportista" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Gestión</div>
@@ -310,7 +317,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/cmr.html'" style="cursor:pointer" class="card" data-cat="normativa">
+          <article onclick="location.href='cmr.html'" style="cursor:pointer" class="card" data-cat="normativa">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&auto=format&fit=crop" alt="Documentación logística" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Normativa</div>
@@ -321,7 +328,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/seguro-transportista.html'" style="cursor:pointer" class="card" data-cat="gestion">
+          <article onclick="location.href='seguro-transportista.html'" style="cursor:pointer" class="card" data-cat="gestion">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80&auto=format&fit=crop" alt="Seguro responsabilidad civil transportista" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Gestión</div>
@@ -332,7 +339,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/combustible.html'" style="cursor:pointer" class="card" data-cat="tarifas">
+          <article onclick="location.href='combustible.html'" style="cursor:pointer" class="card" data-cat="tarifas">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop" alt="Repostaje de gasoil" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Tarifas</div>
@@ -343,7 +350,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/escasez-conductores.html'" style="cursor:pointer" class="card" data-cat="gestion">
+          <article onclick="location.href='escasez-conductores.html'" style="cursor:pointer" class="card" data-cat="gestion">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80&auto=format&fit=crop" alt="Conductor de camión profesional" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Gestión</div>
@@ -354,7 +361,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/adr.html'" style="cursor:pointer" class="card" data-cat="adr">
+          <article onclick="location.href='adr.html'" style="cursor:pointer" class="card" data-cat="adr">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80&auto=format&fit=crop" alt="Mercancías peligrosas ADR señalización" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">ADR</div>
@@ -365,7 +372,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/carta-porte-electronica.html'" style="cursor:pointer" class="card" data-cat="normativa">
+          <article onclick="location.href='carta-porte-electronica.html'" style="cursor:pointer" class="card" data-cat="normativa">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80&auto=format&fit=crop" alt="Digitalización documentación transporte" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Normativa</div>
@@ -376,7 +383,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/iva.html'" style="cursor:pointer" class="card" data-cat="fiscal">
+          <article onclick="location.href='iva.html'" style="cursor:pointer" class="card" data-cat="fiscal">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80&auto=format&fit=crop" alt="Facturación transporte" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Fiscal</div>
@@ -387,7 +394,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/internacional.html'" style="cursor:pointer" class="card" data-cat="internacional">
+          <article onclick="location.href='internacional.html'" style="cursor:pointer" class="card" data-cat="internacional">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&auto=format&fit=crop" alt="Frontera España Francia transporte" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Internacional</div>
@@ -398,7 +405,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/tiempos.html'" style="cursor:pointer" class="card" data-cat="normativa">
+          <article onclick="location.href='tiempos.html'" style="cursor:pointer" class="card" data-cat="normativa">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=600&q=80&auto=format&fit=crop" alt="Conductor profesional cabina camión" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Normativa</div>
@@ -409,7 +416,7 @@ footer p{font-size:.84rem;line-height:1.65}
             </div>
           </article>
 
-          <article onclick="location.href='articulos/tacografo.html'" style="cursor:pointer" class="card" data-cat="gestion">
+          <article onclick="location.href='tacografo.html'" style="cursor:pointer" class="card" data-cat="gestion">
             <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80&auto=format&fit=crop" alt="Tacógrafo digital vehículo pesado" style="width:100%;height:100%;object-fit:cover;display:block"></div>
             <div class="card-body">
               <div class="card-cat">Gestión</div>
@@ -424,16 +431,16 @@ footer p{font-size:.84rem;line-height:1.65}
       </main>
       <!-- SIDEBAR -->
       <aside>
-        <div class="ad-ph ad-ph-300">AdSense 300×250</div>
+        
 
         <div class="sidebar-box">
           <h4>Lo más leído</h4>
           <ul class="sidebar-list">
-            <li><a href="articulos/precio-porte.html">Cómo calcular el precio de un porte</a></li>
-            <li><a href="articulos/novedades-2026.html">Novedades en el transporte 2026</a></li>
-            <li><a href="articulos/tiempos.html">Tiempos de conducción y descanso</a></li>
-            <li><a href="articulos/carta-porte-electronica.html">Carta de porte electrónica 2026</a></li>
-            <li><a href="articulos/tarjeta-transporte.html">La tarjeta de transporte</a></li>
+            <li><a href="precio-porte.html">Cómo calcular el precio de un porte</a></li>
+            <li><a href="novedades-2026.html">Novedades en el transporte 2026</a></li>
+            <li><a href="tiempos.html">Tiempos de conducción y descanso</a></li>
+            <li><a href="carta-porte-electronica.html">Carta de porte electrónica 2026</a></li>
+            <li><a href="tarjeta-transporte.html">La tarjeta de transporte</a></li>
           </ul>
         </div>
           <a href="#" style="display:block;text-align:center;font-size:.8rem;color:var(--brand);font-weight:700">Ver histórico →</a>
@@ -451,15 +458,12 @@ footer p{font-size:.84rem;line-height:1.65}
           </ul>
         </div>
 
-        <div class="ad-ph ad-ph-300">AdSense 300×250</div>
+        
       </aside>
     </div>
   </div>
 </section>
 
-<div class="ad-leaderboard">
-  <div class="ad-leaderboard-inner">
-    <div class="ad-ph ad-ph-728">Google AdSense — 728×90 leaderboard</div>
   </div>
 </div>
 <section class="section section-alt" id="herramientas">
@@ -616,9 +620,6 @@ footer p{font-size:.84rem;line-height:1.65}
   </div>
 </section>
 
-<div class="ad-leaderboard">
-  <div class="ad-leaderboard-inner">
-    <div class="ad-ph ad-ph-728">Google AdSense — 728×90 leaderboard</div>
   </div>
 </div>
 <section class="section" id="normativa">
@@ -646,12 +647,12 @@ footer p{font-size:.84rem;line-height:1.65}
     <div>
       <h4>Artículos</h4>
       <ul>
-        <li><a href="articulos/precio-porte.html">Calcular precio de porte</a></li>
-        <li><a href="articulos/cmr.html">Carta de porte CMR</a></li>
-        <li><a href="articulos/combustible.html">Tasa de combustible</a></li>
-        <li><a href="articulos/adr.html">Mercancías peligrosas ADR</a></li>
-        <li><a href="articulos/tiempos.html">Tiempos de conducción</a></li>
-        <li><a href="articulos/tacografo.html">Tacógrafo digital</a></li>
+        <li><a href="precio-porte.html">Calcular precio de porte</a></li>
+        <li><a href="cmr.html">Carta de porte CMR</a></li>
+        <li><a href="combustible.html">Tasa de combustible</a></li>
+        <li><a href="adr.html">Mercancías peligrosas ADR</a></li>
+        <li><a href="tiempos.html">Tiempos de conducción</a></li>
+        <li><a href="tacografo.html">Tacógrafo digital</a></li>
       </ul>
     </div>
     <div>
