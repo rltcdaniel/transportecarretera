@@ -1,112 +1,4 @@
-<!DOCTYPE
-<section class="section section-alt" id="conversor">
-  <div class="container">
-    <div class="section-title">Conversor de pesos y medidas</div>
-    <div class="section-sub">Convierte entre las unidades más habituales del transporte de mercancías por carretera</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:800px">
-      <div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem">
-          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1rem">Peso</h3>
-          <div class="form-group">
-            <label>Valor</label>
-            <input type="number" id="conv-val" placeholder="Ej: 1000" oninput="convertir()" min="0">
-          </div>
-          <div class="form-group">
-            <label>De</label>
-            <select id="conv-from" onchange="convertir()">
-              <option value="kg">Kilogramos (kg)</option>
-              <option value="t">Toneladas métricas (t)</option>
-              <option value="lb">Libras (lb)</option>
-              <option value="g">Gramos (g)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>A</label>
-            <select id="conv-to" onchange="convertir()">
-              <option value="t">Toneladas métricas (t)</option>
-              <option value="kg">Kilogramos (kg)</option>
-              <option value="lb">Libras (lb)</option>
-              <option value="g">Gramos (g)</option>
-            </select>
-          </div>
-          <div style="background:var(--brand);color:#fff;padding:1rem;border-radius:8px;text-align:center;margin-top:.5rem">
-            <div style="font-size:.78rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Resultado</div>
-            <div id="conv-result" style="font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700">—</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:1.5rem">
-          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1rem">Equivalencias de carga</h3>
-          <div class="form-group">
-            <label>Valor</label>
-            <input type="number" id="eq-val" placeholder="Ej: 33" oninput="equivalencias()" min="0">
-          </div>
-          <div class="form-group">
-            <label>Unidad de entrada</label>
-            <select id="eq-from" onchange="equivalencias()">
-              <option value="paleu">Palés europeos (120×80 cm)</option>
-              <option value="ml">Metros lineales (semirremolque)</option>
-              <option value="m3">Metros cúbicos (m³)</option>
-              <option value="t">Toneladas</option>
-            </select>
-          </div>
-          <div id="eq-result" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:.5rem;font-size:.88rem;line-height:1.8">
-            Introduce un valor para ver las equivalencias
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="planificador">
-  <div class="container">
-    <div class="section-title">Planificador de jornada</div>
-    <div class="section-sub">Comprueba si tu jornada cumple con el Reglamento UE 561/2006 — introduce los tiempos en horas y minutos</div>
-    <div style="max-width:800px;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0">
-        <div style="padding:2rem;border-right:1px solid var(--border)">
-          <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.25rem">Tu jornada</h3>
-          <div class="form-group">
-            <label>Horas de conducción previstas</label>
-            <input type="number" id="plan-cond-h" placeholder="Ej: 8" min="0" max="24" oninput="planificar()">
-          </div>
-          <div class="form-group">
-            <label>Minutos adicionales de conducción</label>
-            <input type="number" id="plan-cond-m" placeholder="Ej: 30" min="0" max="59" oninput="planificar()">
-          </div>
-          <div class="form-group">
-            <label>¿Has tomado la pausa de 45 min?</label>
-            <select id="plan-pausa" onchange="planificar()">
-              <option value="si">Sí</option>
-              <option value="no">No (o menor de 45 min)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Descanso diario previsto (horas)</label>
-            <input type="number" id="plan-descanso" placeholder="Ej: 11" min="0" max="24" oninput="planificar()">
-          </div>
-          <div class="form-group">
-            <label>¿Cuántas veces has ampliado a 10h esta semana?</label>
-            <select id="plan-ampliaciones" onchange="planificar()">
-              <option value="0">Ninguna</option>
-              <option value="1">1 vez</option>
-              <option value="2">2 veces (máximo permitido)</option>
-            </select>
-          </div>
-          <button class="calc-btn" onclick="planificar()">Comprobar jornada</button>
-        </div>
-        <div style="padding:2rem;background:#181818" id="plan-result">
-          <div style="color:#777;font-size:.85rem;text-align:center;padding-top:2rem">Introduce los datos y pulsa comprobar</div>
-        </div>
-      </div>
-    </div>
-    <p style="font-size:.78rem;color:var(--ink-faint);margin-top:.75rem">Esta herramienta es orientativa. Consulta siempre el Reglamento (CE) 561/2006 y el Reglamento (UE) 2020/1054 para decisiones con efectos legales.</p>
-  </div>
-</section>
- html>
-<html lang="es">
+<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -369,8 +261,6 @@ footer p{font-size:.84rem;line-height:1.65}
     <p>Guías prácticas, normativa actualizada y calculadoras gratuitas para autónomos, transportistas y empresas del sector.</p>
   </div>
 </section>
-  </div>
-</div>
 <section class="section" id="articulos">
   <div class="container">
     <div class="two-col">
@@ -583,8 +473,6 @@ footer p{font-size:.84rem;line-height:1.65}
     </div>
   </div>
 </section>
-  </div>
-</div>
 <section class="section section-alt" id="herramientas">
   <div class="container">
     <div class="section-title">Herramientas gratuitas</div>
@@ -596,37 +484,140 @@ footer p{font-size:.84rem;line-height:1.65}
         <p>Estima el precio de un envío según distancia, peso, tipo de vehículo y urgencia.</p>
         <span class="tool-link">Calcular ahora →</span>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" onclick="toggleTool('conversor-panel')">
+        <div class="tool-icon">⚖️</div>
+        <h3>Conversor de pesos y medidas</h3>
+        <p>Convierte entre kg, toneladas, libras y calcula equivalencias en palés, metros lineales y m³.</p>
+        <span class="tool-link">Abrir conversor →</span>
+      </div>
+      <div class="tool-card" onclick="toggleTool('planificador-panel')">
+        <div class="tool-icon">🕐</div>
+        <h3>Planificador de jornada</h3>
+        <p>Comprueba si tu jornada cumple con el Reglamento UE 561/2006 sobre tiempos de conducción.</p>
+        <span class="tool-link">Abrir planificador →</span>
+      </div>
+      <div class="tool-card" style="opacity:.6;cursor:default">
         <div class="tool-icon">⛽</div>
         <h3>Calculadora de combustible</h3>
         <p>Calcula el consumo y coste de gasoil de una ruta con tu vehículo específico.</p>
         <span class="tool-link" style="color:var(--ink-faint)">Próximamente</span>
       </div>
-      <div class="tool-card" onclick="document.getElementById('conversor').scrollIntoView({behavior:'smooth'})">
-        <div class="tool-icon">⚖️</div>
-        <h3>Conversor de pesos y medidas</h3>
-        <p>Convierte kg, toneladas, palés europeos, metros lineales y metros cúbicos al instante.</p>
-        <span class="tool-link">Convertir ahora →</span>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">🕐</div>
-        <h3>Planificador de jornada</h3>
-        <p>Planifica tus rutas respetando los tiempos de conducción y descanso de la UE.</p>
-        <span class="tool-link" style="color:var(--ink-faint)">Próximamente</span>
-      </div>
-      <div class="tool-card">
+      <div class="tool-card" style="opacity:.6;cursor:default">
         <div class="tool-icon">🛣️</div>
         <h3>Estimador de peajes</h3>
-        <p>Estima el coste de peajes en España, Francia y Portugal para vehículos pesados.</p>
+        <p>Consulta el coste de peajes en las principales autopistas españolas según el tipo de vehículo.</p>
         <span class="tool-link" style="color:var(--ink-faint)">Próximamente</span>
       </div>
-      <div class="tool-card">
+      <div class="tool-card" style="opacity:.6;cursor:default">
         <div class="tool-icon">📄</div>
-        <h3>Generador de carta de porte</h3>
-        <p>Crea una carta de porte CMR en PDF con todos los campos obligatorios.</p>
+        <h3>Generador de CMR</h3>
+        <p>Rellena y genera una carta de porte CMR en formato PDF lista para imprimir.</p>
         <span class="tool-link" style="color:var(--ink-faint)">Próximamente</span>
       </div>
     </div>
+
+    <!-- CONVERSOR PANEL (oculto por defecto) -->
+    <div id="conversor-panel" style="display:none;margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700">⚖️ Conversor de pesos y medidas</div>
+        <button onclick="toggleTool('conversor-panel')" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--ink-faint)">✕</button>
+      </div>
+      <div style="padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem">Conversión de peso</h4>
+          <div class="form-group">
+            <label>Valor</label>
+            <input type="number" id="conv-val" placeholder="Ej: 1000" oninput="convertir()" min="0">
+          </div>
+          <div class="form-group">
+            <label>De</label>
+            <select id="conv-from" onchange="convertir()">
+              <option value="kg">Kilogramos (kg)</option>
+              <option value="t">Toneladas (t)</option>
+              <option value="lb">Libras (lb)</option>
+              <option value="g">Gramos (g)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>A</label>
+            <select id="conv-to" onchange="convertir()">
+              <option value="t">Toneladas (t)</option>
+              <option value="kg">Kilogramos (kg)</option>
+              <option value="lb">Libras (lb)</option>
+              <option value="g">Gramos (g)</option>
+            </select>
+          </div>
+          <div style="background:var(--brand);color:#fff;padding:1rem;border-radius:8px;text-align:center;margin-top:.5rem">
+            <div style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Resultado</div>
+            <div id="conv-result" style="font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700">—</div>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem">Equivalencias de carga</h4>
+          <div class="form-group">
+            <label>Valor</label>
+            <input type="number" id="eq-val" placeholder="Ej: 33" oninput="equivalencias()" min="0">
+          </div>
+          <div class="form-group">
+            <label>Unidad</label>
+            <select id="eq-from" onchange="equivalencias()">
+              <option value="paleu">Palés europeos (120×80 cm)</option>
+              <option value="ml">Metros lineales</option>
+              <option value="m3">Metros cúbicos (m³)</option>
+              <option value="t">Toneladas</option>
+            </select>
+          </div>
+          <div id="eq-result" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:.5rem;font-size:.88rem;line-height:1.8">
+            Introduce un valor para ver las equivalencias
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLANIFICADOR PANEL (oculto por defecto) -->
+    <div id="planificador-panel" style="display:none;margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700">🕐 Planificador de jornada</div>
+        <button onclick="toggleTool('planificador-panel')" style="background:none;border:none;cursor:pointer;font-size:1.2rem;color:var(--ink-faint)">✕</button>
+      </div>
+      <div style="padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+        <div>
+          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.25rem">Tu jornada</h4>
+          <div class="form-group">
+            <label>Horas de conducción previstas</label>
+            <input type="number" id="plan-cond-h" placeholder="Ej: 8" min="0" max="15">
+          </div>
+          <div class="form-group">
+            <label>Minutos adicionales</label>
+            <input type="number" id="plan-cond-m" placeholder="Ej: 30" min="0" max="59">
+          </div>
+          <div class="form-group">
+            <label>¿Has hecho la pausa de 45 min?</label>
+            <select id="plan-pausa">
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Descanso diario previsto (horas)</label>
+            <input type="number" id="plan-descanso" placeholder="Mín. 9h" min="0" max="24">
+          </div>
+          <div class="form-group">
+            <label>Ampliaciones a 10h esta semana</label>
+            <select id="plan-ampliaciones">
+              <option value="0">Ninguna</option>
+              <option value="1">1 vez</option>
+              <option value="2">2 veces (máximo)</option>
+            </select>
+          </div>
+          <button class="calc-btn" onclick="planificar()">Verificar jornada</button>
+        </div>
+        <div id="plan-result" style="background:#181818;border-radius:8px;padding:1.5rem;color:#fff;font-size:.88rem;line-height:1.6;align-self:start">
+          Introduce los datos de tu jornada y pulsa verificar.
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 <section class="section calc-section" id="calculadora">
@@ -692,8 +683,6 @@ footer p{font-size:.84rem;line-height:1.65}
     </div>
   </div>
 </section>
-  </div>
-</div>
 <section class="section" id="normativa">
   <div class="container">
     <div class="section-title">Normativa vigente</div>
@@ -765,6 +754,24 @@ footer p{font-size:.84rem;line-height:1.65}
   </div>
 </footer>
 <script>
+
+/* ── TOGGLE HERRAMIENTAS ── */
+function toggleTool(id) {
+  var panel = document.getElementById(id);
+  if (!panel) return;
+  var isOpen = panel.style.display !== 'none';
+  // Close all panels first
+  ['conversor-panel','planificador-panel'].forEach(function(pid) {
+    var p = document.getElementById(pid);
+    if (p) p.style.display = 'none';
+  });
+  // Open this one if it was closed
+  if (!isOpen) {
+    panel.style.display = 'block';
+    panel.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+}
+
 /* ── CALCULADORA DE PORTE ── */
 function calcular() {
   var km = parseFloat(document.getElementById('c-km').value) || 620;
