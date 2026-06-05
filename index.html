@@ -684,7 +684,6 @@ function filterCat(cat,el){
   document.querySelectorAll('#blog-grid [data-cat]').forEach(card=>{
     card.style.display=(cat==='todo'||card.dataset.cat===cat)?'':'none';
   });
-});
 }
 function suscribir(){
   const v=document.getElementById('nl-email').value;
