@@ -678,13 +678,13 @@ footer p{font-size:.84rem;line-height:1.65}
   document.getElementById('r-urg').textContent=Math.round(urg)+'€';
   document.getElementById('res-table').style.display='block';
 }
-function filterCat(e,cat){
-  if(e)e.preventDefault();
+function filterCat(cat,el){
   document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active'));
-  if(e)e.target.classList.add('active');
+  if(el)el.classList.add('active');
   document.querySelectorAll('#blog-grid [data-cat]').forEach(card=>{
-    card.style.display=(cat==='all'||card.dataset.cat===cat)?'':'none';
+    card.style.display=(cat==='todo'||card.dataset.cat===cat)?'':'none';
   });
+});
 }
 function suscribir(){
   const v=document.getElementById('nl-email').value;
