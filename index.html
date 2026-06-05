@@ -523,169 +523,8 @@ footer p{font-size:.84rem;line-height:1.65}
 
     </div>
 
-    <!-- ── PANEL: CALCULADORA ── -->
-    <div id="calc-panel" style="display:none;margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:#181818">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:#fff">🧮 Calculadora de precio de porte</div>
-        <button onclick="toggleTool('calc-panel')" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:#999;line-height:1">✕</button>
-      </div>
-      <div class="calc-wrap">
-        <div class="calc-form">
-          <div class="form-row">
-            <div class="form-group"><label>Origen</label><input type="text" placeholder="Ej: Madrid" id="c-origen"></div>
-            <div class="form-group"><label>Destino</label><input type="text" placeholder="Ej: Barcelona" id="c-destino"></div>
-          </div>
-          <div class="form-group"><label>Distancia (km)</label><input type="number" id="c-km" value="620" min="1"></div>
-          <div class="form-row">
-            <div class="form-group"><label>Peso (kg)</label><input type="number" id="c-peso" value="5000" min="1"></div>
-            <div class="form-group">
-              <label>Tipo de vehículo</label>
-              <select id="c-tipo">
-                <option value="furgon">Furgón (&lt;3,5t)</option>
-                <option value="rigido">Rígido (7,5–18t)</option>
-                <option value="articulado" selected>Articulado (hasta 40t)</option>
-                <option value="frigorifico">Frigorífico</option>
-                <option value="cisterna">Cisterna</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Tipo de mercancía</label>
-            <select id="c-mercancias">
-              <option value="general">General</option>
-              <option value="paletizada">Paletizada</option>
-              <option value="fragil">Frágil</option>
-              <option value="peligrosa">Peligrosa (ADR)</option>
-              <option value="temperatura">Temperatura controlada</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Urgencia</label>
-            <select id="c-urgencia">
-              <option value="normal">Normal (2–3 días)</option>
-              <option value="rapido">Rápido (24h)</option>
-              <option value="express">Express (&lt;12h)</option>
-            </select>
-          </div>
-          <button class="calc-btn" onclick="calcular()">Calcular precio estimado</button>
-        </div>
-        <div class="calc-result">
-          <div class="result-lbl">Precio estimado</div>
-          <div class="result-price" id="r-price">—</div>
-          <div class="result-range" id="r-range">Introduce los datos y pulsa calcular</div>
-          <div class="result-bd" id="r-bd" style="display:none">
-            <div class="result-bd-row"><span>Coste base (km × tarifa)</span><span id="r-km">—</span></div>
-            <div class="result-bd-row"><span>Tasa combustible (18%)</span><span id="r-fuel">—</span></div>
-            <div class="result-bd-row"><span>Suplemento mercancía</span><span id="r-mercan">—</span></div>
-            <div class="result-bd-row"><span>Suplemento urgencia</span><span id="r-urg">—</span></div>
-          </div>
-          <div class="result-note">Estimación orientativa. Los precios reales varían según empresa, ruta y condiciones del contrato.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── PANEL: CONVERSOR ── -->
-    <div id="conversor-panel" style="display:none;margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:#181818">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:#fff">⚖️ Conversor de pesos y medidas</div>
-        <button onclick="toggleTool('conversor-panel')" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:#999;line-height:1">✕</button>
-      </div>
-      <div style="padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-        <div>
-          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem">Conversión de peso</h4>
-          <div class="form-group">
-            <label>Valor</label>
-            <input type="number" id="conv-val" placeholder="Ej: 1000" oninput="convertir()" min="0">
-          </div>
-          <div class="form-group">
-            <label>De</label>
-            <select id="conv-from" onchange="convertir()">
-              <option value="kg">Kilogramos (kg)</option>
-              <option value="t">Toneladas (t)</option>
-              <option value="lb">Libras (lb)</option>
-              <option value="g">Gramos (g)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>A</label>
-            <select id="conv-to" onchange="convertir()">
-              <option value="t">Toneladas (t)</option>
-              <option value="kg">Kilogramos (kg)</option>
-              <option value="lb">Libras (lb)</option>
-              <option value="g">Gramos (g)</option>
-            </select>
-          </div>
-          <div style="background:var(--brand);color:#fff;padding:1rem;border-radius:8px;text-align:center;margin-top:.5rem">
-            <div style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Resultado</div>
-            <div id="conv-result" style="font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700">—</div>
-          </div>
-        </div>
-        <div>
-          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem">Equivalencias de carga</h4>
-          <div class="form-group">
-            <label>Valor</label>
-            <input type="number" id="eq-val" placeholder="Ej: 33" oninput="equivalencias()" min="0">
-          </div>
-          <div class="form-group">
-            <label>Unidad</label>
-            <select id="eq-from" onchange="equivalencias()">
-              <option value="paleu">Palés europeos (120×80 cm)</option>
-              <option value="ml">Metros lineales</option>
-              <option value="m3">Metros cúbicos (m³)</option>
-              <option value="t">Toneladas</option>
-            </select>
-          </div>
-          <div id="eq-result" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:.5rem;font-size:.88rem;line-height:1.8">
-            Introduce un valor para ver las equivalencias
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ── PANEL: PLANIFICADOR ── -->
-    <div id="planificador-panel" style="display:none;margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden">
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:#181818">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:#fff">🕐 Planificador de jornada</div>
-        <button onclick="toggleTool('planificador-panel')" style="background:none;border:none;cursor:pointer;font-size:1.3rem;color:#999;line-height:1">✕</button>
-      </div>
-      <div style="padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
-        <div>
-          <h4 style="font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.25rem">Tu jornada</h4>
-          <div class="form-group">
-            <label>Horas de conducción previstas</label>
-            <input type="number" id="plan-cond-h" placeholder="Ej: 8" min="0" max="15">
-          </div>
-          <div class="form-group">
-            <label>Minutos adicionales</label>
-            <input type="number" id="plan-cond-m" placeholder="Ej: 30" min="0" max="59">
-          </div>
-          <div class="form-group">
-            <label>¿Has hecho la pausa de 45 min?</label>
-            <select id="plan-pausa">
-              <option value="si">Sí</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Descanso diario previsto (horas)</label>
-            <input type="number" id="plan-descanso" placeholder="Mín. 9h" min="0" max="24">
-          </div>
-          <div class="form-group">
-            <label>Ampliaciones a 10h esta semana</label>
-            <select id="plan-ampliaciones">
-              <option value="0">Ninguna</option>
-              <option value="1">1 vez</option>
-              <option value="2">2 veces (máximo)</option>
-            </select>
-          </div>
-          <button class="calc-btn" onclick="planificar()">Verificar jornada</button>
-        </div>
-        <div id="plan-result" style="background:#181818;border-radius:8px;padding:1.5rem;color:#fff;font-size:.88rem;line-height:1.6;align-self:start">
-          Introduce los datos de tu jornada y pulsa verificar.
-        </div>
-      </div>
-    </div>
-
+    <!-- Panel único de herramientas -->
+    <div id="tool-panel" style="display:none;margin-top:2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden"></div>
   </div>
 </section>
 <section class="section" id="normativa">
@@ -761,20 +600,25 @@ footer p{font-size:.84rem;line-height:1.65}
 <script>
 
 /* ── TOGGLE HERRAMIENTAS ── */
+var toolContents = {
+  'calc-panel':       "<div style=\"display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:#181818\">\n        <div style=\"font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:#fff\">\ud83e\uddee Calculadora de precio de porte</div>\n        <button onclick=\"toggleTool('calc-panel')\" style=\"background:none;border:none;cursor:pointer;font-size:1.3rem;color:#999;line-height:1\">\u2715</button>\n      </div>\n      <div class=\"calc-wrap\">\n        <div class=\"calc-form\">\n          <div class=\"form-row\">\n            <div class=\"form-group\"><label>Origen</label><input type=\"text\" placeholder=\"Ej: Madrid\" id=\"c-origen\"></div>\n            <div class=\"form-group\"><label>Destino</label><input type=\"text\" placeholder=\"Ej: Barcelona\" id=\"c-destino\"></div>\n          </div>\n          <div class=\"form-group\"><label>Distancia (km)</label><input type=\"number\" id=\"c-km\" value=\"620\" min=\"1\"></div>\n          <div class=\"form-row\">\n            <div class=\"form-group\"><label>Peso (kg)</label><input type=\"number\" id=\"c-peso\" value=\"5000\" min=\"1\"></div>\n            <div class=\"form-group\">\n              <label>Tipo de veh\u00edculo</label>\n              <select id=\"c-tipo\">\n                <option value=\"furgon\">Furg\u00f3n (&lt;3,5t)</option>\n                <option value=\"rigido\">R\u00edgido (7,5\u201318t)</option>\n                <option value=\"articulado\" selected>Articulado (hasta 40t)</option>\n                <option value=\"frigorifico\">Frigor\u00edfico</option>\n                <option value=\"cisterna\">Cisterna</option>\n              </select>\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label>Tipo de mercanc\u00eda</label>\n            <select id=\"c-mercancias\">\n              <option value=\"general\">General</option>\n              <option value=\"paletizada\">Paletizada</option>\n              <option value=\"fragil\">Fr\u00e1gil</option>\n              <option value=\"peligrosa\">Peligrosa (ADR)</option>\n              <option value=\"temperatura\">Temperatura controlada</option>\n            </select>\n          </div>\n          <div class=\"form-group\">\n            <label>Urgencia</label>\n            <select id=\"c-urgencia\">\n              <option value=\"normal\">Normal (2\u20133 d\u00edas)</option>\n              <option value=\"rapido\">R\u00e1pido (24h)</option>\n              <option value=\"express\">Express (&lt;12h)</option>\n            </select>\n          </div>\n          <button class=\"calc-btn\" onclick=\"calcular()\">Calcular precio estimado</button>\n        </div>\n        <div class=\"calc-result\">\n          <div class=\"result-lbl\">Precio estimado</div>\n          <div class=\"result-price\" id=\"r-price\">\u2014</div>\n          <div class=\"result-range\" id=\"r-range\">Introduce los datos y pulsa calcular</div>\n          <div class=\"result-bd\" id=\"r-bd\" style=\"display:none\">\n            <div class=\"result-bd-row\"><span>Coste base (km \u00d7 tarifa)</span><span id=\"r-km\">\u2014</span></div>\n            <div class=\"result-bd-row\"><span>Tasa combustible (18%)</span><span id=\"r-fuel\">\u2014</span></div>\n            <div class=\"result-bd-row\"><span>Suplemento mercanc\u00eda</span><span id=\"r-mercan\">\u2014</span></div>\n            <div class=\"result-bd-row\"><span>Suplemento urgencia</span><span id=\"r-urg\">\u2014</span></div>\n          </div>\n          <div class=\"result-note\">Estimaci\u00f3n orientativa. Los precios reales var\u00edan seg\u00fan empresa, ruta y condiciones del contrato.</div>\n        </div>\n      </div>",
+  'conversor-panel':  "<div style=\"display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:#181818\">\n        <div style=\"font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:#fff\">\u2696\ufe0f Conversor de pesos y medidas</div>\n        <button onclick=\"toggleTool('conversor-panel')\" style=\"background:none;border:none;cursor:pointer;font-size:1.3rem;color:#999;line-height:1\">\u2715</button>\n      </div>\n      <div style=\"padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem\">\n        <div>\n          <h4 style=\"font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem\">Conversi\u00f3n de peso</h4>\n          <div class=\"form-group\">\n            <label>Valor</label>\n            <input type=\"number\" id=\"conv-val\" placeholder=\"Ej: 1000\" oninput=\"convertir()\" min=\"0\">\n          </div>\n          <div class=\"form-group\">\n            <label>De</label>\n            <select id=\"conv-from\" onchange=\"convertir()\">\n              <option value=\"kg\">Kilogramos (kg)</option>\n              <option value=\"t\">Toneladas (t)</option>\n              <option value=\"lb\">Libras (lb)</option>\n              <option value=\"g\">Gramos (g)</option>\n            </select>\n          </div>\n          <div class=\"form-group\">\n            <label>A</label>\n            <select id=\"conv-to\" onchange=\"convertir()\">\n              <option value=\"t\">Toneladas (t)</option>\n              <option value=\"kg\">Kilogramos (kg)</option>\n              <option value=\"lb\">Libras (lb)</option>\n              <option value=\"g\">Gramos (g)</option>\n            </select>\n          </div>\n          <div style=\"background:var(--brand);color:#fff;padding:1rem;border-radius:8px;text-align:center;margin-top:.5rem\">\n            <div style=\"font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em\">Resultado</div>\n            <div id=\"conv-result\" style=\"font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700\">\u2014</div>\n          </div>\n        </div>\n        <div>\n          <h4 style=\"font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1rem\">Equivalencias de carga</h4>\n          <div class=\"form-group\">\n            <label>Valor</label>\n            <input type=\"number\" id=\"eq-val\" placeholder=\"Ej: 33\" oninput=\"equivalencias()\" min=\"0\">\n          </div>\n          <div class=\"form-group\">\n            <label>Unidad</label>\n            <select id=\"eq-from\" onchange=\"equivalencias()\">\n              <option value=\"paleu\">Pal\u00e9s europeos (120\u00d780 cm)</option>\n              <option value=\"ml\">Metros lineales</option>\n              <option value=\"m3\">Metros c\u00fabicos (m\u00b3)</option>\n              <option value=\"t\">Toneladas</option>\n            </select>\n          </div>\n          <div id=\"eq-result\" style=\"background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:1rem;margin-top:.5rem;font-size:.88rem;line-height:1.8\">\n            Introduce un valor para ver las equivalencias\n          </div>\n        </div>\n      </div>",
+  'planificador-panel': "<div style=\"display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:#181818\">\n        <div style=\"font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:#fff\">\ud83d\udd50 Planificador de jornada</div>\n        <button onclick=\"toggleTool('planificador-panel')\" style=\"background:none;border:none;cursor:pointer;font-size:1.3rem;color:#999;line-height:1\">\u2715</button>\n      </div>\n      <div style=\"padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem\">\n        <div>\n          <h4 style=\"font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;margin-bottom:1.25rem\">Tu jornada</h4>\n          <div class=\"form-group\">\n            <label>Horas de conducci\u00f3n previstas</label>\n            <input type=\"number\" id=\"plan-cond-h\" placeholder=\"Ej: 8\" min=\"0\" max=\"15\">\n          </div>\n          <div class=\"form-group\">\n            <label>Minutos adicionales</label>\n            <input type=\"number\" id=\"plan-cond-m\" placeholder=\"Ej: 30\" min=\"0\" max=\"59\">\n          </div>\n          <div class=\"form-group\">\n            <label>\u00bfHas hecho la pausa de 45 min?</label>\n            <select id=\"plan-pausa\">\n              <option value=\"si\">S\u00ed</option>\n              <option value=\"no\">No</option>\n            </select>\n          </div>\n          <div class=\"form-group\">\n            <label>Descanso diario previsto (horas)</label>\n            <input type=\"number\" id=\"plan-descanso\" placeholder=\"M\u00edn. 9h\" min=\"0\" max=\"24\">\n          </div>\n          <div class=\"form-group\">\n            <label>Ampliaciones a 10h esta semana</label>\n            <select id=\"plan-ampliaciones\">\n              <option value=\"0\">Ninguna</option>\n              <option value=\"1\">1 vez</option>\n              <option value=\"2\">2 veces (m\u00e1ximo)</option>\n            </select>\n          </div>\n          <button class=\"calc-btn\" onclick=\"planificar()\">Verificar jornada</button>\n        </div>\n        <div id=\"plan-result\" style=\"background:#181818;border-radius:8px;padding:1.5rem;color:#fff;font-size:.88rem;line-height:1.6;align-self:start\">\n          Introduce los datos de tu jornada y pulsa verificar.\n        </div>\n      </div>"
+};
+var activePanel = null;
 function toggleTool(id) {
-  var panel = document.getElementById(id);
-  if (!panel) return;
-  var isOpen = panel.style.display !== 'none';
-  // Close all panels first
-  ['conversor-panel','planificador-panel'].forEach(function(pid) {
-    var p = document.getElementById(pid);
-    if (p) p.style.display = 'none';
-  });
-  // Open this one if it was closed
-  if (!isOpen) {
-    panel.style.display = 'block';
-    panel.scrollIntoView({behavior:'smooth', block:'start'});
+  var container = document.getElementById('tool-panel');
+  if (!container) return;
+  if (activePanel === id) {
+    container.style.display = 'none';
+    container.innerHTML = '';
+    activePanel = null;
+    return;
   }
+  container.innerHTML = toolContents[id] || '';
+  container.style.display = 'block';
+  activePanel = id;
+  container.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 /* ── CALCULADORA DE PORTE ── */
