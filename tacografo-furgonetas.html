@@ -228,7 +228,19 @@ footer p{font-size:.84rem;line-height:1.65}
 .article-page-meta { font-size:.78rem; color:#777 }
 .article-page-img { width:100%; max-height:280px; object-fit:cover; display:block; border-radius:8px; margin-bottom:1.75rem }
 .article-ad { display:flex; justify-content:center; margin:0 -1.5rem 1.75rem; padding:.75rem 1.5rem; background:var(--surface-2); border-bottom:1px solid var(--border) }
-.article-standalone{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 4rem}.article-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1.5rem;text-decoration:none;padding:.4rem .85rem;border:1.5px solid var(--brand);border-radius:5px;transition:all .15s}.article-back:hover{background:var(--brand);color:#fff;text-decoration:none}.article-hero{background:#181818;padding:2rem 1.5rem 1.75rem;border-bottom:3px solid var(--brand)}.article-hero-inner{max-width:760px;margin:0 auto}.article-page-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin-bottom:.5rem}.article-page-title{font-family:"Barlow Condensed",sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem}.article-page-meta{font-size:.78rem;color:#777}.article-page-img{width:100%;max-height:280px;object-fit:cover;display:block;border-radius:8px;margin-bottom:1.75rem}</style>
+.article-standalone{max-width:760px;margin:0 auto;padding:2.5rem 1.5rem 4rem}.article-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1.5rem;text-decoration:none;padding:.4rem .85rem;border:1.5px solid var(--brand);border-radius:5px;transition:all .15s}.article-back:hover{background:var(--brand);color:#fff;text-decoration:none}.article-hero{background:#181818;padding:2rem 1.5rem 1.75rem;border-bottom:3px solid var(--brand)}.article-hero-inner{max-width:760px;margin:0 auto}.article-page-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin-bottom:.5rem}.article-page-title{font-family:"Barlow Condensed",sans-serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:.5rem}.article-page-meta{font-size:.78rem;color:#777}.article-page-img{width:100%;max-height:280px;object-fit:cover;display:block;border-radius:8px;margin-bottom:1.75rem}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .15s;text-decoration:none;color:inherit;display:block}
+.related-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.15);transform:translateY(-2px);text-decoration:none}
+.related-card-img{width:100%;height:160px;object-fit:cover;display:block}
+.related-card-img-placeholder{width:100%;height:160px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.related-card-body{padding:1rem}
+.related-card-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand);margin-bottom:.35rem}
+.related-card-title{font-family:"Barlow Condensed",sans-serif;font-size:1.05rem;font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:.5rem}
+.related-card-meta{font-size:.75rem;color:var(--ink-faint)}
+.related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
+@media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <header class="site-header"><div class="header-inner"><a href="index.html" class="site-logo">Transporte<span>Carretera</span>.com</a><nav class="main-nav"><a href="index.html#articulos">Artículos</a><a href="index.html#herramientas">Herramientas</a><a href="index.html#normativa">Normativa</a></nav></div></header>
@@ -259,7 +271,39 @@ footer p{font-size:.84rem;line-height:1.65}
 <h2>Lista de comprobación antes del 1 de julio</h2>
 <ul><li>✅ Identifica qué furgonetas superan los 2,5 t de MMA y cuáles hacen transporte internacional.</li><li>✅ Instala el tacógrafo G2V2 en un taller autorizado DGT.</li><li>✅ Solicita la tarjeta de conductor para cada conductor afectado en la Jefatura Provincial de Tráfico (con 4-6 semanas de antelación).</li><li>✅ Forma a tus conductores en los modos de actividad y los límites del Reglamento 561/2006.</li><li>✅ Establece un procedimiento de descarga de datos (tarjeta cada 28 días, UV cada 90 días).</li></ul>
 <div class="warn-box"><div class="box-title">⚠️ Los talleres están saturados</div>Los talleres autorizados para instalación de tacógrafos reportan alta demanda en las semanas previas al 1 de julio. Si aún no has instalado el dispositivo, contacta cuanto antes: los plazos de instalación se están alargando considerablemente.</div></div>
-<div style="margin-top:3rem;padding-top:2rem;border-top:2px solid var(--brand-light)"><h2 style="font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:1rem">También te puede interesar</h2><ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem"><li><a href="tacografo.html" style="color:var(--brand);font-weight:600;text-decoration:none">→ Tacógrafo digital: funcionamiento y sanciones</a> <span style="color:var(--ink-faint);font-size:.82rem">· Gestión</span></li><li><a href="tiempos.html" style="color:var(--brand);font-weight:600;text-decoration:none">→ Tiempos de conducción y descanso</a> <span style="color:var(--ink-faint);font-size:.82rem">· Normativa</span></li><li><a href="infracciones-sanciones-transporte.html" style="color:var(--brand);font-weight:600;text-decoration:none">→ Infracciones y sanciones en el transporte</a> <span style="color:var(--ink-faint);font-size:.82rem">· Normativa</span></li><li><a href="novedades-2026.html" style="color:var(--brand);font-weight:600;text-decoration:none">→ Novedades en el transporte 2026</a> <span style="color:var(--ink-faint);font-size:.82rem">· Normativa</span></li></ul></div>
+
+<div style="margin-top:3rem;padding-top:2.5rem;border-top:2px solid var(--border)">
+<h2 style="font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:1.5rem;color:var(--ink)">También te puede interesar</h2>
+<div class="related-grid">
+<a href="tacografo.html" class="related-card">
+  <img loading="lazy" class="related-card-img" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=80&auto=format&fit=crop" alt="Tacógrafo digital cabina camión">
+  <div class="related-card-body">
+    <div class="related-card-cat">Gestión</div>
+    <div class="related-card-title">Tacógrafo digital: funcionamiento y sanciones</div>
+    <div class="related-card-meta">📅 3 marzo 2026 · ⏱ 9 min</div>
+    <span class="related-card-read">Leer →</span>
+  </div>
+</a>
+<a href="tiempos.html" class="related-card">
+  <img loading="lazy" class="related-card-img" src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=600&q=80&auto=format&fit=crop" alt="Conductor cabina camión tiempos conducción">
+  <div class="related-card-body">
+    <div class="related-card-cat">Normativa</div>
+    <div class="related-card-title">Tiempos de conducción y descanso</div>
+    <div class="related-card-meta">📅 14 marzo 2026 · ⏱ 8 min</div>
+    <span class="related-card-read">Leer →</span>
+  </div>
+</a>
+<a href="infracciones-sanciones-transporte.html" class="related-card">
+  <img loading="lazy" class="related-card-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80&auto=format&fit=crop" alt="Control inspección transporte carretera sanción">
+  <div class="related-card-body">
+    <div class="related-card-cat">Normativa</div>
+    <div class="related-card-title">Infracciones y sanciones en el transporte</div>
+    <div class="related-card-meta">📅 5 junio 2026 · ⏱ 9 min</div>
+    <span class="related-card-read">Leer →</span>
+  </div>
+</a>
+</div>
+</div>
 <div style="margin-top:2rem"><a href="index.html#articulos" class="article-back">← Volver a artículos</a></div>
 </div>
 <footer><div class="footer-grid"><div><div style="font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:.75rem">Transporte<span style="color:var(--brand)">Carretera</span>.com</div><p>Portal informativo para profesionales del transporte de mercancías por carretera en España.</p></div><div><h4>Artículos</h4><ul><li><a href="tacografo-furgonetas.html">Tacógrafo furgonetas 2026</a></li><li><a href="seguro-mercancias.html">Seguro de mercancías</a></li><li><a href="precio-porte.html">Calcular precio de porte</a></li></ul></div><div><h4>Herramientas</h4><ul><li><a href="index.html#herramientas">Calculadora de porte</a></li></ul></div><div><h4>Legal</h4><ul><li><a href="aviso-legal.html">Aviso legal</a></li><li><a href="contacto.html">Contacto</a></li></ul></div></div><div class="footer-bottom"><span>© 2026 TransporteCarretera.com</span><span>Información orientativa — consulta siempre fuentes oficiales</span></div></footer>

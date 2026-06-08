@@ -228,6 +228,18 @@ footer p{font-size:.84rem;line-height:1.65}
 .article-page-meta { font-size:.78rem; color:#777 }
 .article-page-img { width:100%; max-height:280px; object-fit:cover; display:block; border-radius:8px; margin-bottom:1.75rem }
 .article-ad { display:flex; justify-content:center; margin:0 -1.5rem 1.75rem; padding:.75rem 1.5rem; background:var(--surface-2); border-bottom:1px solid var(--border) }
+
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1.5rem}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:box-shadow .2s,transform .15s;text-decoration:none;color:inherit;display:block}
+.related-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.15);transform:translateY(-2px);text-decoration:none}
+.related-card-img{width:100%;height:160px;object-fit:cover;display:block}
+.related-card-img-placeholder{width:100%;height:160px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.related-card-body{padding:1rem}
+.related-card-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand);margin-bottom:.35rem}
+.related-card-title{font-family:"Barlow Condensed",sans-serif;font-size:1.05rem;font-weight:700;line-height:1.25;color:var(--ink);margin-bottom:.5rem}
+.related-card-meta{font-size:.75rem;color:var(--ink-faint)}
+.related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
+@media(max-width:640px){.related-grid{grid-template-columns:1fr}}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6071705220271253" crossorigin="anonymous"></script>
 </head>
@@ -253,7 +265,7 @@ footer p{font-size:.84rem;line-height:1.65}
 </div>
 <div class="article-standalone">
   <a href="index.html#articulos" class="article-back">← Volver a artículos</a>
-  <img class="article-page-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80&auto=format&fit=crop" alt="La carta de porte CMR: todo lo que debes saber">
+  <img loading="lazy" class="article-page-img" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80&auto=format&fit=crop" alt="Documentación logística carta de porte CMR">
   <div class="article-content">
     <p>La carta de porte CMR es el documento clave en el transporte internacional de mercancías por carretera en Europa. Si transitas por la Unión Europea, conocerla no es opcional: es obligatoria en la mayoría de los trayectos internacionales y su correcta cumplimentación puede salvarte de problemas legales y económicos.</p>
 
@@ -307,9 +319,7 @@ footer p{font-size:.84rem;line-height:1.65}
 <h2>Diferencia entre CMR y albarán de entrega</h2>
 <p>Es frecuente confundir ambos documentos. El <strong>albarán</strong> es un documento interno de la empresa cargadora que acredita la salida de la mercancía de su almacén, mientras que la <strong>CMR</strong> es el contrato de transporte entre las tres partes. En el transporte internacional es obligatorio disponer de ambos, y sus datos deben coincidir.</p>
   </div>
-  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)">
-    <a href="index.html#articulos" class="article-back">← Volver a artículos</a>
-  </div>
+  
   <h2 style="font-family:Barlow Condensed,sans-serif;margin-top:3rem;margin-bottom:1.5rem">También te puede interesar</h2><div class="blog-grid" style="grid-template-columns:repeat(3,1fr)"><a href="precio-porte.html" style="text-decoration:none;color:inherit">
   <article class="card">
     <div class="card-img" style="padding:0"><img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80&auto=format&fit=crop" alt="Cómo calcular el precio de un porte: guía definitiva para autónomos y pymes" style="width:100%;height:100%;object-fit:cover;display:block"></div>
