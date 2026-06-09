@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -442,14 +450,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Pesa antes de salir</div>Si tienes dudas sobre el peso de la carga, busca una báscula pública antes de iniciar el trayecto. Muchas estaciones de servicio para vehículos pesados disponen de básculas de acceso libre o de pago reducido. El coste de un pesaje previo es infinitamente menor que el de una sanción por exceso de peso, una inmovilización en carretera y los costes asociados de reorganización de la mercancía.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Cuál es el peso máximo de un camión articulado en España?</h3>
+<details>
+<summary>¿Cuál es el peso máximo de un camión articulado en España?</summary>
 <p>El peso máximo de un conjunto articulado en España es de 40 toneladas para configuraciones de 5 ejes y de 44 toneladas para 6 o más ejes. Para el transporte combinado (parte del trayecto en ferrocarril o barco), el límite es de 44 toneladas con 5 ejes.</p>
-<h3>¿Quién es responsable del exceso de peso: el transportista o el cargador?</h3>
+</details>
+<details>
+<summary>¿Quién es responsable del exceso de peso: el transportista o el cargador?</summary>
 <p>Ambos pueden serlo dependiendo de las circunstancias. El cargador responde cuando el exceso se debe a declaración incorrecta del peso. El transportista responde cuando acepta la carga sin verificarla. En la práctica, en un control en carretera la sanción recae sobre el transportista, que puede después repetir contra el cargador por vía civil.</p>
-<h3>¿Cuánto es la multa por exceso de peso en un camión?</h3>
+</details>
+<details>
+<summary>¿Cuánto es la multa por exceso de peso en un camión?</summary>
 <p>Las multas según la LOTT son: hasta el 5% de exceso, leve (100–300 €); entre 5% y 15%, grave (401–1.000 €); más del 15%, muy grave (1.001–4.000 € más posible inmovilización).</p>
+</details>
 
-La Directiva (UE) 2015/719 y su transposición española permiten a los vehículos de propulsión alternativa (eléctricos, de hidrógeno y determinados híbridos) superar el límite de MMA en hasta 2 toneladas adicionales para compensar el mayor peso de los sistemas de propulsión alternativa, siempre que la carga útil transportada no sea mayor que la de un vehículo equivalente de combustión. En la práctica: un articulado de 6 ejes eléctrico puede llegar a 46 t de MMA.
 </div>
   </div>
   </div>

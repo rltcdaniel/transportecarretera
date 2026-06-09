@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -430,14 +438,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Consejo práctico</div>Si realizas cabotaje habitualmente, conserva siempre a bordo del vehículo la documentación completa del transporte internacional previo (CMR firmado y sellado en destino) y el CMR de cada operación de cabotaje. En caso de control, la carga de la prueba de que el cabotaje es legal recae sobre el transportista: son tus documentos los que deben demostrar que cumples las reglas, no el agente quien debe demostrar que las incumples.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Qué es el cabotaje en el transporte de mercancías?</h3>
+<details>
+<summary>¿Qué es el cabotaje en el transporte de mercancías?</summary>
 <p>El cabotaje es el transporte nacional de mercancías realizado por cuenta ajena por una empresa de transporte de otro Estado miembro de la UE. Por ejemplo, una empresa española que, tras descargar en Alemania, carga otra mercancía en Alemania para entregarla en otro punto alemán está haciendo cabotaje en Alemania.</p>
-<h3>¿Cuántas operaciones de cabotaje se pueden hacer?</h3>
+</details>
+<details>
+<summary>¿Cuántas operaciones de cabotaje se pueden hacer?</summary>
 <p>Según el Reglamento (CE) 1072/2009, se pueden realizar un máximo de 3 operaciones de cabotaje en el mismo país de acogida, en un plazo de 7 días naturales desde la descarga total de la mercancía del transporte internacional previo. Tras completar el cabotaje, el mismo vehículo no puede volver a hacer cabotaje en ese mismo país durante los 4 días siguientes.</p>
-<h3>¿Se puede hacer cabotaje sin licencia comunitaria?</h3>
+</details>
+<details>
+<summary>¿Se puede hacer cabotaje sin licencia comunitaria?</summary>
 <p>No. El cabotaje solo puede realizarlo un transportista que sea titular de una licencia comunitaria vigente. Realizar cabotaje sin licencia comunitaria está tipificado como infracción muy grave en la LOTT española, con sanciones de entre 4.000 y 6.000 euros más la posible inmovilización del vehículo.</p>
+</details>
 
-En determinadas circunstancias, quien encarga el transporte (el cargador o el comisionista de transporte) puede ser considerado corresponsable de la infracción si sabía o debía saber que el transportista al que contrató no cumplía los requisitos legales para el cabotaje. Antes de adjudicar un porte en régimen de cabotaje a un transportista extranjero, verifica que tiene licencia comunitaria vigente.
 </div>
   </div>
   </div>

@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -428,14 +436,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Consejo práctico</div>Documenta siempre el estado de la mercancía al recogerla y al entregarla. Fotografías con marca de tiempo son la mejor prueba en caso de disputas sobre daños. Anota cualquier irregularidad en la carta de porte antes de firmarla, tanto en la casilla de reservas del porteador al recoger como en la del destinatario al recibir. Una reserva bien formulada puede ser la diferencia entre una reclamación exitosa y una pérdida asumida.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Es obligatorio el contrato escrito en el transporte de mercancías?</h3>
+<details>
+<summary>¿Es obligatorio el contrato escrito en el transporte de mercancías?</summary>
 <p>No es obligatorio que el contrato de transporte se formalice por escrito. La LCTTM reconoce el contrato verbal, aunque en la práctica siempre es recomendable disponer de algún documento que acredite las condiciones pactadas (confirmación de pedido, correo electrónico, carta de porte). La carta de porte firmada por las partes es el documento que mejor acredita la existencia y las condiciones del contrato.</p>
-<h3>¿Cuánto tiempo tiene el destinatario para reclamar por daños en la mercancía?</h3>
+</details>
+<details>
+<summary>¿Cuánto tiempo tiene el destinatario para reclamar por daños en la mercancía?</summary>
 <p>Si el daño es aparente (visible en el momento de la entrega), el destinatario debe formular reservas en el mismo acto de la entrega. Si el daño no es aparente, tiene 7 días hábiles desde la entrega para comunicarlo al porteador. Para reclamar por retraso, el plazo es de 21 días desde la puesta a disposición de la mercancía. Si no se cumplen estos plazos, la ley presume que la mercancía fue entregada correctamente.</p>
-<h3>¿Qué es la declaración especial de valor en el transporte de mercancías?</h3>
+</details>
+<details>
+<summary>¿Qué es la declaración especial de valor en el transporte de mercancías?</summary>
 <p>La declaración especial de valor es una indicación que el cargador puede hacer en la carta de porte para fijar un límite de indemnización superior al legal (un tercio del IPREM diario por kg). Si el cargador declara el valor real de la mercancía, la indemnización máxima en caso de pérdida será ese valor declarado en lugar del límite legal. Habitualmente el porteador aplica un suplemento en el precio del porte cuando existe declaración especial de valor.</p>
+</details>
 
-Si el destinatario recibe la mercancía sin formular reservas en los plazos indicados, la ley presume que la mercancía fue entregada en las condiciones descritas en la carta de porte. Esto significa que, salvo prueba en contrario muy difícil de aportar, el derecho a reclamar por los daños queda extinguido.
 </div>
   </div>
   </div>

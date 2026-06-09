@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -420,14 +428,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Consejo práctico</div>Pon en el calendario una alerta tres meses antes del mes que te corresponde para el visado. Reúne la documentación con antelación, especialmente los certificados de la AEAT y la Seguridad Social (que tienen caducidad). Muchas gestorías especializadas en transporte ofrecen el servicio de visado por cuenta del titular: delegar este trámite asegura que se presenta correctamente y en plazo.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Cuándo hay que realizar el visado de la tarjeta de transporte?</h3>
+<details>
+<summary>¿Cuándo hay que realizar el visado de la tarjeta de transporte?</summary>
 <p>El visado de las autorizaciones de transporte de mercancías pesadas (MDP) se realiza en años impares (2025, 2027, 2029...). El mes concreto depende del último dígito del NIF de la empresa o del autónomo, según el calendario establecido por la Resolución de la Dirección General de Transporte Terrestre. Los meses de agosto y diciembre están excluidos del calendario de visado.</p>
-<h3>¿Qué pasa si no se presenta el visado en el mes que corresponde?</h3>
+</details>
+<details>
+<summary>¿Qué pasa si no se presenta el visado en el mes que corresponde?</summary>
 <p>Si el titular no presenta la solicitud de visado en el mes que le corresponde, la Administración puede declarar la suspensión de la autorización. Durante la suspensión no se puede realizar transporte público de forma legal. Para recuperar la autorización es necesario iniciar un expediente de rehabilitación, más largo y complejo que el visado ordinario.</p>
-<h3>¿Los autónomos con furgoneta necesitan visado?</h3>
+</details>
+<details>
+<summary>¿Los autónomos con furgoneta necesitan visado?</summary>
 <p>Los autónomos titulares de autorizaciones MDL tienen sus propios calendarios de visado, diferentes a los de la MDP. Los titulares de MDL con vehículos de menos de 12 años de antigüedad no están obligados a acreditar capacidad financiera durante el visado, simplificando el trámite. Consulta con el órgano de transporte de tu comunidad autónoma el calendario y requisitos específicos para MDL.</p>
+</details>
 
-Las autorizaciones MDL (mercancías discrecional vehículo ligero hasta 3.500 kg MMA) tienen un régimen diferente. Las personas físicas titulares de MDL no tienen obligación de acreditar capacidad financiera durante el visado si ninguno de sus vehículos supera los 12 años de antigüedad. Consulta con tu comunidad autónoma el calendario específico para MDL.
 </div>
   </div>
   </div>

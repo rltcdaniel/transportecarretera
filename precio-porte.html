@@ -351,6 +351,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -428,16 +436,20 @@ footer p{font-size:.84rem;line-height:1.65}
 </table>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Cuánto cuesta un porte Madrid-Barcelona?</h3>
+<details>
+<summary>¿Cuánto cuesta un porte Madrid-Barcelona?</summary>
 <p>Un porte de carga completa en articulado entre Madrid y Barcelona (aproximadamente 620 km) tiene un precio de mercado de entre <strong>850 € y 1.100 €</strong> dependiendo del tipo de mercancía, urgencia y condiciones del contrato.</p>
-
-<h3>¿Hay un precio mínimo legal para el transporte?</h3>
+</details>
+<details>
+<summary>¿Hay un precio mínimo legal para el transporte?</summary>
 <p>La Ley 15/2021 de medidas urgentes en transporte fijó un mecanismo de costes mínimos de explotación en el transporte de mercancías por carretera. Aunque su aplicación ha sido discutida, establece que los contratos deben cubrir al menos los costes variables de la operación (combustible, peajes, etc.).</p>
-
-<h3>¿Cómo justifico el precio ante mi cliente?</h3>
+</details>
+<details>
+<summary>¿Cómo justifico el precio ante mi cliente?</summary>
 <p>Lo más profesional es emitir un presupuesto desglosado que incluya: coste base, tasa de combustible, peajes estimados y cualquier suplemento aplicable. Esto genera confianza y evita disputas posteriores.</p>
-<div class="tip-box"><div class="box-title">💡 Recomendación final</div>Usa nuestra calculadora de porte (en esta misma web) para obtener una estimación rápida. Para presupuestos reales, contacta siempre con varias empresas del sector y compara condiciones.</div>
-  </div>
+</details>
+
+</div>
 
   <h2 style="font-family:Barlow Condensed,sans-serif;margin-top:3rem;margin-bottom:1.5rem">También te puede interesar</h2><div class="blog-grid" style="grid-template-columns:repeat(3,1fr)"><a href="cmr.html" style="text-decoration:none;color:inherit">
   <article class="card">

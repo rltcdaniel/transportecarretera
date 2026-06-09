@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -415,14 +423,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Consejo práctico</div>Si eres autónomo del transporte y no tienes el CPC, valorar sacarlo es una inversión que se amortiza rápidamente: elimina la dependencia de un gestor externo, reduce costes fijos y te da control total sobre los trámites de visado y autorización. El examen es complejo pero hay academias especializadas con buenos índices de aprobados en pocos meses de preparación.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Qué es el gestor de transporte?</h3>
+<details>
+<summary>¿Qué es el gestor de transporte?</summary>
 <p>El gestor de transporte es la persona física que, dentro de una empresa de transporte, se responsabiliza de manera efectiva y permanente de la gestión de los transportes de la empresa. Debe poseer el Certificado de Competencia Profesional (CPC) y mantener un vínculo real con la empresa. Es obligatorio en todas las empresas que operen con vehículos de más de 3.500 kg o que realicen transporte internacional con vehículos de más de 2.500 kg.</p>
-<h3>¿Puede un autónomo del transporte ser su propio gestor?</h3>
+</details>
+<details>
+<summary>¿Puede un autónomo del transporte ser su propio gestor?</summary>
 <p>Sí. Si el autónomo tiene el Certificado de Competencia Profesional (CPC), puede actuar como su propio gestor de transporte. Esto es lo más habitual entre los transportistas autónomos que operan con camiones. Si no tiene el CPC, debe contratar a un gestor externo con contrato laboral a jornada completa.</p>
-<h3>¿Qué pasa si la empresa se queda sin gestor de transporte?</h3>
+</details>
+<details>
+<summary>¿Qué pasa si la empresa se queda sin gestor de transporte?</summary>
 <p>Si el gestor de transporte de una empresa cesa (por fallecimiento, renuncia o pérdida de honorabilidad), la empresa dispone de un plazo máximo de 6 meses para designar un nuevo gestor. Durante ese periodo puede seguir operando. Si transcurren los 6 meses sin designar nuevo gestor, la empresa pierde el requisito de competencia profesional y sus autorizaciones quedan en riesgo de suspensión.</p>
+</details>
 
-Si eres autónomo del transporte y no tienes el CPC, valorar sacarlo es una inversión que se amortiza rápidamente: elimina la dependencia de un gestor externo, reduce costes fijos y te da control total sobre los trámites de visado y autorización. El examen es complejo pero hay academias especializadas con buenos índices de aprobados en pocos meses de preparación.
 </div>
   </div>
   </div>

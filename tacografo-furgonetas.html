@@ -345,6 +345,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -381,16 +389,23 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="warn-box"><div class="box-title">⚠️ Los talleres están saturados</div>Los talleres autorizados para instalación de tacógrafos reportan alta demanda en las semanas previas al 1 de julio. Si aún no has instalado el dispositivo, contacta cuanto antes: los plazos de instalación se están alargando considerablemente.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Desde cuándo es obligatorio el tacógrafo en furgonetas?</h3>
+<details>
+<summary>¿Desde cuándo es obligatorio el tacógrafo en furgonetas?</summary>
 <p>La obligación del tacógrafo en furgonetas entra en vigor el 1 de julio de 2026. Afecta a los vehículos de entre 2,5 y 3,5 toneladas de MMA que realicen transporte internacional de mercancías o cabotaje, conforme al Reglamento (UE) 2020/1054 del Paquete de Movilidad I.</p>
-<h3>¿Qué tipo de tacógrafo necesita una furgoneta?</h3>
+</details>
+<details>
+<summary>¿Qué tipo de tacógrafo necesita una furgoneta?</summary>
 <p>Las furgonetas obligadas a llevar tacógrafo desde el 1 de julio de 2026 deben instalar el tacógrafo inteligente de segunda generación (G2V2), también llamado tacógrafo inteligente versión 2. Este dispositivo incorpora GPS integrado, comunicación DSRC para control remoto y requiere tarjeta de conductor ITS para cada conductor.</p>
-<h3>¿El tacógrafo de furgonetas afecta al transporte nacional en España?</h3>
+</details>
+<details>
+<summary>¿El tacógrafo de furgonetas afecta al transporte nacional en España?</summary>
 <p>No. La obligación del 1 de julio de 2026 solo afecta al transporte internacional y al cabotaje. Las furgonetas que realicen únicamente transporte nacional en España no están obligadas a llevar tacógrafo por esta normativa, salvo que el legislador español decida extenderlo al tráfico interior en el futuro.</p>
-<h3>¿Cuánto cuesta instalar un tacógrafo G2V2 en una furgoneta?</h3>
+</details>
+<details>
+<summary>¿Cuánto cuesta instalar un tacógrafo G2V2 en una furgoneta?</summary>
 <p>El coste de instalación de un tacógrafo inteligente G2V2 en una furgoneta oscila entre 700 y 1.500 euros, incluyendo el dispositivo y la mano de obra de instalación en un taller autorizado por la DGT. A esto hay que añadir el coste de la tarjeta de conductor (entre 20 y 50 € por conductor) que debe solicitarse en la Jefatura Provincial de Tráfico.</p>
+</details>
 
-No. La obligación del 1 de julio se limita al transporte internacional y al cabotaje. Las furgonetas que realicen únicamente transporte nacional en España no están obligadas por esta norma (salvo que el legislador español la extienda en el futuro).
 </div>
   </div>
   </div>

@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -419,14 +427,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Consejo práctico</div>Si operas regularmente en ciudades con ZBE, descarga las apps oficiales de cada ciudad (Madrid360, Barcelona ZBE) para consultar las restricciones actualizadas en tiempo real. Las restricciones pueden cambiar por episodios de alta contaminación o por modificaciones de ordenanza, y operar sin saberlo puede suponer multas acumuladas significativas.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Qué es una Zona de Bajas Emisiones?</h3>
+<details>
+<summary>¿Qué es una Zona de Bajas Emisiones?</summary>
 <p>Una Zona de Bajas Emisiones (ZBE) es un área geográfica delimitada por un municipio donde se restringe o prohíbe la circulación de determinados vehículos según su nivel de emisiones contaminantes, determinado por la etiqueta medioambiental de la DGT. La Ley 7/2021 de Cambio Climático obliga a todos los municipios de más de 50.000 habitantes a implantar una ZBE.</p>
-<h3>¿Qué multa tiene entrar a la ZBE de Madrid sin etiqueta?</h3>
+</details>
+<details>
+<summary>¿Qué multa tiene entrar a la ZBE de Madrid sin etiqueta?</summary>
 <p>La multa por entrar a la ZBE de Madrid con un vehículo no autorizado (sin etiqueta o con etiqueta insuficiente para esa zona) es de 200 euros. Las infracciones se detectan mediante un sistema de cámaras de control de acceso que registra las matrículas y las cruza con la base de datos de etiquetas de la DGT. No existe aviso previo: la sanción se notifica directamente al titular del vehículo.</p>
-<h3>¿Los camiones de reparto están exentos de las ZBE?</h3>
+</details>
+<details>
+<summary>¿Los camiones de reparto están exentos de las ZBE?</summary>
 <p>No de forma general. Algunos municipios incluyen excepciones para el transporte de mercancías (ventanas horarias de reparto, acceso para vehículos de servicio esencial), pero estas excepciones varían enormemente entre ciudades y deben consultarse específicamente para cada ZBE. En Madrid, por ejemplo, los vehículos de distribución urbana de mercancías tienen regulación específica dentro del Plan de Movilidad Urbana Sostenible, pero no están exentos de forma automática.</p>
+</details>
 
-Las excepciones para el transporte de mercancías varían de forma muy significativa entre municipios y cambian frecuentemente. Antes de operar en una ciudad con ZBE, verifica la ordenanza vigente o contacta directamente con el ayuntamiento. Lo que es válido en Madrid puede no serlo en Bilbao, y viceversa.
 </div>
   </div>
   </div>

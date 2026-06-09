@@ -343,6 +343,14 @@ footer p{font-size:.84rem;line-height:1.65}
 .related-card-meta{font-size:.75rem;color:var(--ink-faint)}
 .related-card-read{font-size:.8rem;font-weight:700;color:var(--brand);margin-top:.5rem;display:inline-block}
 @media(max-width:640px){.related-grid{grid-template-columns:1fr}}
+
+.article-content details{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden}
+.article-content details summary{padding:.85rem 1.1rem;cursor:pointer;font-weight:600;font-family:'Barlow',sans-serif;font-size:.95rem;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
+.article-content details summary::-webkit-details-marker{display:none}
+.article-content details summary::after{content:'+';font-size:1.2rem;color:var(--brand);font-weight:400;flex-shrink:0;margin-left:1rem}
+.article-content details[open] summary::after{content:'−'}
+.article-content details[open] summary{border-bottom:1px solid var(--border)}
+.article-content details p{padding:.9rem 1.1rem;margin:0;font-size:.92rem;line-height:1.75;color:var(--ink-soft);font-family:'Lora',serif}
 </style>
 </head>
 <body>
@@ -437,14 +445,19 @@ footer p{font-size:.84rem;line-height:1.65}
 <div class="tip-box"><div class="box-title">💡 Consulta la etiqueta de tu flota ahora</div>Puedes consultar la etiqueta ambiental de cualquier vehículo de tu flota en sede.dgt.gob.es introduciendo la matrícula, sin necesidad de certificado digital. Si un vehículo tiene derecho a etiqueta y no la tiene asignada, solicítala: en las ciudades que controlan el acceso digitalmente (como Madrid con Madrid360 o Barcelona con su app ZBE), la etiqueta registrada en la base de datos de la DGT es lo que determina el acceso, no el adhesivo físico.</div>
 
 <h2>Preguntas frecuentes</h2>
-<h3>¿Qué etiqueta DGT tiene un camión Euro 6?</h3>
+<details>
+<summary>¿Qué etiqueta DGT tiene un camión Euro 6?</summary>
 <p>Un camión o vehículo de transporte de mercancías con motor Euro 6 (en vigor para vehículos pesados nuevos desde 2014) tiene derecho a la etiqueta C (distintivo verde) de la DGT. Esta etiqueta permite circular en la ZBE general de Madrid y en la mayoría de ZBE españolas, aunque puede tener restricciones en las Zonas de Especial Protección (ZBEDEP) de algunas ciudades.</p>
-<h3>¿Los vehículos sin etiqueta pueden circular en Madrid?</h3>
+</details>
+<details>
+<summary>¿Los vehículos sin etiqueta pueden circular en Madrid?</summary>
 <p>Los vehículos sin etiqueta medioambiental (anteriores a Euro 3 en gasolina o Euro 4 en diésel) tienen prohibido el acceso a las Zonas de Bajas Emisiones (ZBE) de Madrid en cualquier condición. Esto incluye tanto el núcleo central (ZBEDEP Distrito Centro) como la ZBE del conjunto del municipio de Madrid. Las infracciones se detectan mediante cámaras de control de acceso y la multa es de 200 euros.</p>
-<h3>¿Puedo circular en las ZBE con un camión diésel antiguo para hacer una entrega?</h3>
+</details>
+<details>
+<summary>¿Puedo circular en las ZBE con un camión diésel antiguo para hacer una entrega?</summary>
 <p>Depende de la ciudad y del tipo de vehículo. Muchos municipios con ZBE tienen excepciones específicas para el transporte de mercancías, como ventanas horarias de reparto en las primeras horas de la mañana o autorizaciones temporales para determinadas actividades esenciales. La situación varía significativamente entre ciudades, por lo que debes consultar la ordenanza municipal específica de cada ciudad donde operes antes de asumir que existe una excepción.</p>
+</details>
 
-Algunos municipios han establecido excepciones específicas para vehículos de más de 3,5 toneladas en sus ordenanzas de ZBE, permitiendo el acceso a camiones independientemente de su etiqueta siempre que realicen operaciones de carga y descarga. Esto varía significativamente entre ciudades: en algunos casos es una excepción general, en otros requiere autorización previa o se limita a franjas horarias. Verifica siempre la ordenanza del municipio concreto.
 </div>
   </div>
   </div>
